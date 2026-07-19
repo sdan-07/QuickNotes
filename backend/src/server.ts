@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import app from './app.js';
 import { db_connect } from './config/db.js';
 const port = 3000;
