@@ -9,7 +9,7 @@ interface NoteType extends Document {
 const noteSchema = new mongoose.Schema<NoteType>({
   timestamp: {
     type: Date,
-    default: Date.now,
+    default: Date.now()
   },
   title: {
     required: true,

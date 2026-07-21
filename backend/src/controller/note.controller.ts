@@ -19,11 +19,11 @@ export const addNotes = async (req: Request, res: Response): Promise<Response> =
 
 export const fetchNotes = async (_: Request, res: Response): Promise<Response> => {
     try{
-        const note = await noteModel.find();
-        if (note.length === 0 || !note)
+        const notes = await noteModel.find();
+        if (notes.length === 0 || !notes)
             return res.status(404).json({message: "No Notes found"});
 
-        return res.status(200).json({message: "notes fetched", note});
+        return res.status(200).json({message: "notes fetched", notes});
 
     }catch(e){
         return res.status(500).json({message: "Server failure", e})

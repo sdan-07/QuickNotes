@@ -4,7 +4,10 @@ import cors from 'cors';
 const app: Application = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: process.env.APP_URL || true,
+    methods: ['POST', 'GET', 'PUT', 'DELETE']
+}));
 
 app.use('/api/notes', noteRoutes)
 
