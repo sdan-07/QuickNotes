@@ -42,6 +42,7 @@ The workspace is organized containing both the frontend and backend applications
 
 ### Building the Container
 To build the Docker image locally, execute the following command from the root directory:
+
 `docker build -t quicknotes .`
 
 ### AWS Deployment Workflow
